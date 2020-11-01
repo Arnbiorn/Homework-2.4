@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -129,6 +130,9 @@ AwMDA+KcjO+4jw
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.crop.circle.fill" catalog="system" id="vCD-Dj-20O"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Kv1-zO-Ov4" id="L5f-7w-wTU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxh-q8-H4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Vlv-we-n7s" userLabel="Exit" sceneMemberID="exit"/>
@@ -150,32 +154,122 @@ AwMDA+KcjO+4jw
                                     <segue destination="Kix-Pp-gYf" kind="show" id="CX3-K7-Vg2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! Я хотел бы рассказать немного о себе. Если заинтересован - переходи по кнопке снизу" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOz-2B-f0h">
+                                <rect key="frame" x="16" y="243.5" width="288" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BeA-Ud-bub"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BeA-Ud-bub" firstAttribute="bottom" secondItem="p67-6Q-ifn" secondAttribute="bottom" constant="35" id="0q5-GA-w9B"/>
                             <constraint firstItem="BeA-Ud-bub" firstAttribute="trailing" secondItem="p67-6Q-ifn" secondAttribute="trailing" constant="16" id="P1Z-cK-uby"/>
+                            <constraint firstAttribute="trailing" secondItem="AOz-2B-f0h" secondAttribute="trailing" constant="16" id="RIl-gV-nuM"/>
+                            <constraint firstItem="AOz-2B-f0h" firstAttribute="centerY" secondItem="AN2-aq-QqX" secondAttribute="centerY" id="UPA-uw-u2K"/>
                             <constraint firstItem="p67-6Q-ifn" firstAttribute="leading" secondItem="BeA-Ud-bub" secondAttribute="leading" constant="16" id="qNp-6L-Bci"/>
+                            <constraint firstItem="AOz-2B-f0h" firstAttribute="centerX" secondItem="AN2-aq-QqX" secondAttribute="centerX" id="u2E-Ak-24h"/>
+                            <constraint firstItem="AOz-2B-f0h" firstAttribute="leading" secondItem="AN2-aq-QqX" secondAttribute="leading" constant="16" id="vih-bg-L1R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sWc-u3-9GR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cop-Y8-Ri2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="892"/>
+            <point key="canvasLocation" x="2570.625" y="891.54929577464793"/>
         </scene>
-        <!--View Controller-->
+        <!--More Info View Controller-->
         <scene sceneID="hpt-xm-TCj">
             <objects>
-                <viewController id="Kix-Pp-gYf" sceneMemberID="viewController">
+                <viewController id="Kix-Pp-gYf" customClass="MoreInfoViewController" customModule="Homework_2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G5G-8Z-cfh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="962-8g-F60">
+                                <rect key="frame" x="16" y="65" width="288" height="349"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Родился и вырос:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O9-0J-msC">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-v2-ZDe">
+                                        <rect key="frame" x="0.0" y="36.5" width="75" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Школа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v82-Z0-aD9">
+                                        <rect key="frame" x="0.0" y="73" width="62" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMv-57-lNK">
+                                        <rect key="frame" x="0.0" y="109.5" width="75" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВУЗ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-y2-gaW">
+                                        <rect key="frame" x="0.0" y="146" width="38.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN1-qp-ptX">
+                                        <rect key="frame" x="0.0" y="182.5" width="75" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Специальность:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="692-wt-C2k">
+                                        <rect key="frame" x="0.0" y="219" width="137.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHc-3u-0Sk">
+                                        <rect key="frame" x="0.0" y="255.5" width="75" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стек технологий, которыми владею:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6th-BH-HTx">
+                                        <rect key="frame" x="0.0" y="292" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqe-cg-8dR">
+                                        <rect key="frame" x="0.0" y="328.5" width="75" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TMA-Vr-XqX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="962-8g-F60" firstAttribute="leading" secondItem="TMA-Vr-XqX" secondAttribute="leading" constant="16" id="Euc-Wn-GBA"/>
+                            <constraint firstItem="962-8g-F60" firstAttribute="centerX" secondItem="G5G-8Z-cfh" secondAttribute="centerX" id="NKj-dr-PnQ"/>
+                            <constraint firstItem="TMA-Vr-XqX" firstAttribute="trailing" secondItem="962-8g-F60" secondAttribute="trailing" constant="16" id="ZG6-zb-4q5"/>
+                            <constraint firstItem="962-8g-F60" firstAttribute="top" secondItem="TMA-Vr-XqX" secondAttribute="top" constant="21" id="cjU-r0-Bv5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AVI-tb-3ry"/>
+                    <connections>
+                        <outlet property="homelandLabel" destination="3O3-v2-ZDe" id="Qql-qs-bA9"/>
+                        <outlet property="schoolLabel" destination="TMv-57-lNK" id="7zI-K0-q5g"/>
+                        <outlet property="specializationLabel" destination="tHc-3u-0Sk" id="EQR-fk-sGM"/>
+                        <outlet property="technologyLabel" destination="Uqe-cg-8dR" id="kTf-eC-4Nc"/>
+                        <outlet property="universityLabel" destination="RN1-qp-ptX" id="CIF-X2-2bw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea2-VT-7PB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,6 +281,7 @@ AwMDA+KcjO+4jw
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wkC-gM-eh5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C6k-Ud-KLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -222,6 +317,9 @@ AwMDA+KcjO+4jw
     <resources>
         <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
